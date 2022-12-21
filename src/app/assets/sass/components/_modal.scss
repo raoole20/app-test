@@ -1,0 +1,126 @@
+.app-modal_display {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #00000081;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .modal-container {
+    width: 302px;
+    min-height: 269px;
+    max-height: 480px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: 15px 12px;
+    position: relative;
+    z-index: 50;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    .circular-btn {
+      height: 34px;
+      width: 34px;
+      border-radius: 50%;
+
+      background-color: $alert;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      font-family: $nunito;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 37px;
+      letter-spacing: 0em;
+      text-align: left;
+      color: #ffffff;
+
+      position: absolute;
+      right: -10px;
+      top: -10px;
+    }
+
+    header {
+      h4 {
+        font-family: $nunito;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 25px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: $gris-primario;
+      }
+    }
+
+    .label-alert-modal{
+        color: $alert;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        font-size: 12px;
+    }
+
+    .container.player-selected {
+      min-height: 35px;
+      max-height: 108px;
+      overflow-y: scroll;
+
+      .player-selected {
+        font-family: $nunito;
+        font-size: 14px;
+        font-weight: bolder;
+        line-height: 22px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: $gris-primario;
+
+        display: flex;
+        gap: 8px;
+
+        background-color: $gris-tint;
+        padding: 5px 10px;
+
+        max-height: 26px;
+      }
+    }
+
+    .modal-input-container {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 25px;
+      width: 221px;
+      align-items: center;
+      justify-content: center;
+
+      .custom-input {
+        border-bottom: 1px solid #b0b0b0;
+        flex: 80%;
+      }
+
+      ion-input.custom {
+        --background: #fff;
+        --color: #3f454e;
+        --placeholder-color: #b0b0b0;
+        --placeholder-opacity: 0.8;
+
+        --padding-bottom: 10px;
+        --padding-end: 10px;
+        --padding-start: 10px;
+        --padding-top: 10px;
+      }
+    }
+
+    .success {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+}

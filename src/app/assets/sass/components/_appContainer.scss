@@ -1,0 +1,16 @@
+
+.main-body{
+    --background: #3F454E url('../../../../../public/assets/icons/background.svg') no-repeat center/100%;
+    .app-container-header{
+        margin: 35px 25px 0;
+    }
+    
+    .app-container_contenido{
+        header{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+    }
+}

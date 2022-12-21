@@ -1,0 +1,31 @@
+.player-display {
+    width: 100%;
+  .player-display_description {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    font-size: 14px;
+    font-weight: 900;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: $gris-primario;
+    font-family: $nunito;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  .player-display_options {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: $gris-primario;
+    font-family: $nunito;
+    font-weight: 600;
+
+  }
+}

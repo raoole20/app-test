@@ -1,12 +1,21 @@
 import { FC } from "react"
 import { IonCol, IonGrid, IonImg, IonRow } from "@ionic/react"
 import { PlayerInterface } from "../../app/core"
+import { useDispatch } from "react-redux"
+import { playerActions } from "../../app/store/slices"
 
 interface ItemProps {
   players: PlayerInterface[]
 }
 
 const PlayerItem: FC<ItemProps> = ({ players }) => {
+  const dispatch = useDispatch()
+
+  const removePlayer = (index: number) => {
+    console.log('holi')
+    dispatch(playerActions.removePlayer(index))
+  }
+
   return (
     <div className="player-display">
       <IonGrid>
@@ -22,7 +31,7 @@ const PlayerItem: FC<ItemProps> = ({ players }) => {
                 </div>
               </IonCol>
               <IonCol sizeXs="2" className="player-display_options">
-                <span>x</span>
+                <span onClick={()=> removePlayer(index)}>x</span>
               </IonCol>
             </IonRow>
           ))

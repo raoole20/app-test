@@ -1,5 +1,7 @@
 .player-display {
     width: 100%;
+    overflow-y: scroll;
+
   .player-display_description {
     display: flex;
     align-items: center;

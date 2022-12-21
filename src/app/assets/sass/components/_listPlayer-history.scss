@@ -1,0 +1,28 @@
+.contenedor-list-player {
+  height: 100%;
+  min-height: 300px;
+  max-height: 500px;
+  overflow-y: scroll;
+  margin-top: 20px;
+
+  .list-players {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    .list-item {
+      display: flex;
+      gap: 10px;
+
+      font-family: $nunito;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 22px;
+      letter-spacing: 0em;
+      text-align: left;
+
+      padding: 0 20px;
+      margin-bottom: 15px;
+    }
+  }
+}

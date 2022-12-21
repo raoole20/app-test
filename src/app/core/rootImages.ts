@@ -17,6 +17,8 @@ export const rootImages = {
             pink: `${dirImages}/emojis/emoji-pink.svg`,
             orange: `${dirImages}/emojis/emoji-orange.svg`,
             red: `${dirImages}/emojis/emoji-red.svg`,
-        }
+        },
+        camera: `${dirImages}/camera.svg`,
+        grup: `${dirImages}/grup-icon.svg`
     }
 } 

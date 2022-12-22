@@ -1,10 +1,14 @@
 import { createSlice } from "@reduxjs/toolkit"
 
-
 const init = { 
     open: false,
-    showConfirm: false
+    showConfirm: false,
+    showIconModal: false, 
+    payload: {
+        player: null,
+    }
 }
+
 const modalSlice = createSlice({
     name: 'modal',
     initialState: init,
@@ -15,9 +19,16 @@ const modalSlice = createSlice({
         openConfirmModal(state) {
             state.showConfirm = true
         },
+        openIconModal(state, payload) {
+            state.showIconModal = true
+            state.payload = {
+                player: payload.payload.player
+            }
+        },
         closeModal(state){
             state.open = false
             state.showConfirm = false
+            state.showIconModal = false
         }
     }
 })

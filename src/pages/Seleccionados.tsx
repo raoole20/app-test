@@ -6,7 +6,7 @@ import AppContainer from "../app/components/AppContainer";
 import { PlayerInterface, rootImages } from "../app/core";
 import { modalActions } from "../app/store/slices/modal";
 import PlayerItem from "./players/PlayerItem";
-import  ConfirmModal  from './players/PlayerModal'
+import  ConfirmModal  from './players/modals/PlayerModal'
 
 const Tab3: React.FC = () => {
   const [presentAlert] = useIonAlert();
@@ -36,6 +36,7 @@ const Tab3: React.FC = () => {
         },
       ],
       onWillDismiss: () => {
+        console.log(players)
         localStorage.setItem('players', JSON.stringify(players))
         history.push('/')
       }

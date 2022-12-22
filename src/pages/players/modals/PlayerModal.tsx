@@ -2,11 +2,11 @@ import { useRef, useState, FormEvent, FC } from 'react'
 import { IonLabel, IonInput, IonIcon, IonImg } from '@ionic/react'
 
 import { useDispatch } from 'react-redux'
-import { rootImages } from '../../app/core'
-import { playerActions } from '../../app/store/slices'
-import { modalActions } from '../../app/store/slices/modal'
-import AppModal from '../../app/components/AppModal'
-import ChipItem from '../../app/components/ChipItem'
+import { rootImages } from '../../../app/core'
+import { playerActions } from '../../../app/store/slices'
+import { modalActions } from '../../../app/store/slices/modal'
+import AppModal from '../../../app/components/AppModal'
+import ChipItem from '../../../app/components/ChipItem'
 import { useHistory } from 'react-router'
 
 
@@ -49,6 +49,7 @@ const PlayerModal: FC<PlayerModalInterface> = ({ isConfirm, text }) => {
 
     const savedHandle = () => {
         dispatch(modalActions.closeModal())
+        console.log(players)
         localStorage.setItem('players', JSON.stringify(players))
         history.push("/seleccionados")
     }

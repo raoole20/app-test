@@ -5,12 +5,14 @@ import { add, alertCircleOutline } from "ionicons/icons";
 import { PlayerInterface, rootImages } from "../../app/core";
 import PlayerItem from "./PlayerItem";
 import { modalActions } from "../../app/store/slices/modal";
-import ConfirmModal from "./PlayerModal";
+import ConfirmModal from "./modals/PlayerModal";
 import { Link } from "react-router-dom";
+import IconModal from "./modals/IconModal";
 
 const ListPlayer = () => {
   const players: PlayerInterface[] = useSelector((state: any) => state.player.players)
   const showModal: boolean = useSelector((state: any) => state.modal.open)
+  const showIconModal: boolean = useSelector((state: any) => state.modal.showIconModal)
   const showConfirmModal: boolean = useSelector((state: any) => state.modal.showConfirm)
   const dispatch = useDispatch()
 
@@ -25,6 +27,7 @@ const ListPlayer = () => {
   return (
     <>
 
+      { showIconModal && <IconModal  />}
       {showModal && <ConfirmModal isConfirm={false} text="Confirmar" />}
       {showConfirmModal && <ConfirmModal isConfirm={true} text="A jugar!" />}
       <div className="app-container_seccion">

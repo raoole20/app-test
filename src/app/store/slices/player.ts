@@ -61,6 +61,15 @@ const playerSlice = createSlice({
     seleccionarPlayer(state) {
       const statePlayer = state.history_player.data.participants
       state.players = statePlayer
+    },
+    updatePlayer( state, action) {
+      const { name, icon, position } = action.payload
+      state.players.forEach((player: any, index: any) => {
+        if(player.position === position ) {
+          player.name = name ? name : player.name
+          player.icon = icon ? icon : player.icon
+        }
+      });
     }
   }
 })

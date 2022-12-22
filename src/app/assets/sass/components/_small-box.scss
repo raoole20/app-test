@@ -1,0 +1,17 @@
+.small-box {
+    padding: 5px;
+    text-align: center;
+
+    header {
+        h6 {
+            color:  #3F454E;
+            font-size: 15px,
+            
+        }
+    }
+
+    .button-small-box {
+        display: flex;
+        gap: 8px;
+    }
+}

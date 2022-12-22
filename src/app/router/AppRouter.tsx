@@ -1,15 +1,14 @@
 import { Route, Redirect } from 'react-router'
 import HistorialPage from '../../pages/historial/HistorialPage'
 import HistoyWithPlayer from '../../pages/historial/HistoyWithPlayer'
-import Tab1 from '../../pages/players/PlayerPage'
-import Tab2 from '../../pages/Tab2'
-import Tab3 from '../../pages/Seleccionados'
+import Players from '../../pages/players/PlayerPage'
+import Seleccionados from '../../pages/Seleccionados'
 
 const AppRouter = () => {
     return (
     <>
         <Route exact path="/players">
-            <Tab1 />
+            <Players />
         </Route>
 
         <Route exact path={'/history'}>
@@ -20,11 +19,8 @@ const AppRouter = () => {
             <HistoyWithPlayer />
         </Route>
 
-        <Route exact path="/tab2">
-            <Tab2 />
-        </Route>
         <Route path="/seleccionados">
-            <Tab3 />
+            <Seleccionados />
         </Route>
         <Route exact path="/">
             <Redirect to="/players" />

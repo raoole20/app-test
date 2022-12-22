@@ -25,6 +25,10 @@
     justify-content: space-between;
     align-items: center;
 
+    &.small {
+      min-height: auto;
+    }
+
     .circular-btn {
       height: 34px;
       width: 34px;
@@ -121,10 +125,23 @@
       width: 221px;
       align-items: center;
       justify-content: center;
+      margin-top: 5px;
 
       .custom-input {
         border-bottom: 1px solid #b0b0b0;
         flex: 80%;
+      }
+
+      .player-icons {
+        width: 45px;
+        height: 45px;
+        position: relative;
+
+        .icon-float-edit {
+          position: absolute;
+          right: 0px;
+          top: 0px;
+        }
       }
 
       ion-input.custom {
